@@ -9,10 +9,12 @@ from docx import Document
 f=Document('test/English.docx')
 
 re_f=re.compile(r'.*confidence.*',re.I) #re.I忽略大小写
-#re_f=re.compile(r'.*know.*',re.I) 
+re_p=re.compile(r'\.|\?|\!') 
 for fparagraph in f.paragraphs:
-    p=fparagraph.text.split('.')
+    #p=fparagraph.text.split('.')
+    p=re.split(re_p,fparagraph.text)
     for item in p:
         #加if判断减去空的结果
         findall_f=re_f.findall(item) 
-        print(findall_f)
+        for find_f in findall_f:
+            print(find_f+'.')
