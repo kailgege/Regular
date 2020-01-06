@@ -8,7 +8,7 @@ from docx import Document
 
 f=Document('test/zuowen.docx')
 
-string=input("需要替换的字符串：")
+string=input("需要查找的字符串：")
 '''
 unicode 标点符号     u"[\u3000-\u303f\ufb00-\ufffd]+"  unicode 中文字符  u'[\u4e00-\u9fa5]+'
 只匹配中文：re_f=re.compile(u'[\u4e00-\u9fa5|\u3000-\u303f|\ufb00-\ufffd]*十八岁[\u4e00-\u9fa5||\u3000-\u303f|\ufb00-\ufffd]*') 
