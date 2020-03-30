@@ -9,7 +9,7 @@ from docx import Document
 
 f=Document('test/http.docx')
 
-re_f=re.compile(r"(http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*,]|(?:%[0-9a-fA-F][0-9a-fA-F]))+)|([a-zA-Z]+.\w+\.+[a-zA-Z0-9\/_]+)")
+re_f=re.compile(r"(http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*,]|(?:%[0-9a-fA-F][0-9a-fA-F]))+)")
 #re_g = re.compile('.*g_img={url: "(http.*?jpg)"', re.S)
 re_g = re.compile(r'http.*?[jpg|mp4|mkv|mp3]', re.S)
 re_p=re.compile(r'\!|。|？|！|……')
