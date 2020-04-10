@@ -44,7 +44,10 @@ for b in range(lenSignid-1):
     #print(type(Signid[b]))
 '''
 
+i=0
 for Stuid in Studentid:
+    if Stuid in Signid:
+        i=i+1
     if Stuid not in Signid:
-        print('学号'+Stuid+'未签到')
+        print('学号'+Stuid+sheet.cell_value(i+6,1)+'未签到')
     
